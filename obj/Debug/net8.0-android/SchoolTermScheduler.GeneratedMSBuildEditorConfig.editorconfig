@@ -1,0 +1,110 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property.TargetFramework = net8.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SchoolTermScheduler
+build_property.ProjectDir = /Users/frankangel/Desktop/School-Term-Scheduler/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Pages/AddAssessment.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Pages.AddAssessment.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/AddAssessment.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/AddAssessment.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Pages/AddCourse.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Pages.AddCourse.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/AddCourse.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/AddCourse.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Pages/AddTerm.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Pages.AddTerm.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/AddTerm.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/AddTerm.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Pages/AssessmentDetails.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Pages.AssessmentDetails.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/AssessmentDetails.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/AssessmentDetails.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Pages/AssessmentScheduler.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Pages.AssessmentScheduler.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/AssessmentScheduler.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/AssessmentScheduler.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Pages/CourseDetails.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Pages.CourseDetails.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/CourseDetails.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/CourseDetails.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Pages/CourseScheduler.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Pages.CourseScheduler.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/CourseScheduler.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/CourseScheduler.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Pages/EditAssessment.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Pages.EditAssessment.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/EditAssessment.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/EditAssessment.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Pages/EditCourse.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Pages.EditCourse.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/EditCourse.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/EditCourse.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Pages/EditTerm.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Pages.EditTerm.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/EditTerm.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/EditTerm.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Pages/TermScheduler.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Pages.TermScheduler.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/TermScheduler.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/TermScheduler.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/frankangel/Desktop/School-Term-Scheduler/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchoolTermScheduler.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml

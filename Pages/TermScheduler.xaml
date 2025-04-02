@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.Pages.TermScheduler"
+             xmlns:vm="clr-namespace:C971.ViewModels"
+             xmlns:class="clr-namespace:C971.Classes"
+             x:DataType="vm:AddTermViewModel">
+
+    <Shell.TitleView>
+        <Label Text="Term Scheduler" 
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               TextColor="White"
+               FontSize="30"
+               FontAttributes="Bold"/>
+    </Shell.TitleView>
+    
+    <Grid RowDefinitions="*, Auto" RowSpacing="20">
+        <CollectionView ItemsSource="{Binding TermList}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type class:Term}">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Delete"
+                                           BackgroundColor="Red"
+                                           Command="{Binding Source={RelativeSource AncestorType={x:Type vm:AddTermViewModel}}, Path=DeleteTermCommand}"
+                                           CommandParameter="{Binding .}"></SwipeItem>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <SwipeView.LeftItems>
+                            <SwipeItems>
+                                <SwipeItem x:Name="EditSwipeItem" 
+                                           Text="Edit"
+                                           BackgroundColor="Khaki"
+                                           Command="{Binding Source={RelativeSource AncestorType={x:Type vm:AddTermViewModel}}, Path=EditTermCommand}"
+                                           CommandParameter="{Binding .}"></SwipeItem>
+                            </SwipeItems>
+                        </SwipeView.LeftItems>
+                        <Grid Padding="10,5">
+                            <Frame BackgroundColor="LightBlue"
+                                   HeightRequest="100">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:AddTermViewModel}}, Path=TapTermCommand}"
+                                                          CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                                <Grid ColumnDefinitions="2*,2*"
+                                      HorizontalOptions="Fill"
+                                      VerticalOptions="Center">
+                                    <Label Text="{Binding Name}"
+                                           FontSize="24"
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"></Label>
+                                    <VerticalStackLayout Grid.Column="1" 
+                                                         HorizontalOptions="Center"
+                                                         VerticalOptions="Center"
+                                                         Spacing="5">
+                                        <Label Text="{Binding StartDate, StringFormat='Start Date: {0:M/d/yy}'}"
+                                               FontSize="16"></Label>
+                                        <Label Text="{Binding EndDate, StringFormat='End Date: {0:M/d/yy}'}"
+                                               FontSize="16"></Label>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button x:Name="AddTermButton"
+                Text="Add Term"
+                Grid.Row="1"
+                HorizontalOptions="Center" 
+                VerticalOptions="End" 
+                Margin="0,0,0,20" 
+                BackgroundColor="#0078D4" 
+                TextColor="White" 
+                WidthRequest="200"
+                HeightRequest="70"
+                Clicked="AddTermButton_OnClicked"/>
+    </Grid>
+</ContentPage>

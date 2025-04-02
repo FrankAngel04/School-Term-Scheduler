@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.Pages.AssessmentDetails"
+             xmlns:vm="clr-namespace:C971.ViewModels"
+             x:DataType="vm:EditAssessmentViewModel">
+   
+    <Shell.TitleView>
+        <Label Text="{Binding SelectedAssessment.Type}" 
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               Margin="0,0,60,0"
+               TextColor="White"
+               FontSize="23"
+               FontAttributes="Bold"
+               LineBreakMode="TailTruncation"/>
+    </Shell.TitleView>
+       
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" RowSpacing="20" Padding="20">
+       <Frame>
+            <Grid ColumnDefinitions=".5*, .5*">
+                   <Label Text="Name:"
+                          VerticalOptions="Center"
+                          FontSize="20"></Label>
+                   <Label Text="{Binding SelectedAssessment.Name}"
+                          Grid.Column="1"
+                          VerticalOptions="Center"
+                          FontSize="20"/>   
+            </Grid>
+       </Frame>
+            
+       <Frame Grid.Row="1">
+              <Grid ColumnDefinitions=".5*, .5*">
+                <Label Text="Start-Date:"
+                               VerticalOptions="Center"
+                               FontSize="20"></Label>
+                <Label Text="{Binding SelectedAssessment.StartDate, StringFormat='{0:M/d/yy}'}"
+                       Grid.Column="1"
+                       VerticalOptions="Center"
+                       FontSize="20"/>
+              </Grid>
+       </Frame>
+         
+       <Frame Grid.Row="2">
+         <Grid ColumnDefinitions=".5*, .5*">
+                <Label Text="End-Date:"
+                       VerticalOptions="Center"
+                       FontSize="20"></Label>
+                <Label Text="{Binding SelectedAssessment.EndDate, StringFormat='{0:M/d/yy}'}"
+                       Grid.Column="1"
+                       VerticalOptions="Center"
+                       FontSize="20"/>
+         </Grid>
+       </Frame>
+         
+       <Frame Grid.Row="3">
+         <Grid ColumnDefinitions=".5*, .5*">
+           <Label Text="Notify:"
+             VerticalOptions="Center"
+             FontSize="20">
+           </Label>
+           <Label Text="{Binding SelectedAssessment.Notify}"
+             Grid.Column="1"
+             VerticalOptions="Center"
+             FontSize="20">
+             <Label.Triggers>
+                <DataTrigger TargetType="Label"
+                             Binding="{Binding SelectedAssessment.Notify}"
+                             Value="True">
+                    <Setter Property="Text"
+                            Value="Yes"></Setter>
+                </DataTrigger>
+                <DataTrigger TargetType="Label"
+                             Binding="{Binding SelectedAssessment.Notify}"
+                             Value="False">
+                    <Setter Property="Text"
+                            Value="No"></Setter>
+                </DataTrigger>
+             </Label.Triggers>
+           </Label>
+         </Grid>
+       </Frame>
+        
+        <HorizontalStackLayout Grid.Row="4" HorizontalOptions="Center" Spacing="20">
+          <Button x:Name="DeleteAssessmentButton"
+                  Text="Delete Assessment"
+                  BackgroundColor="#0078D4"
+                  WidthRequest="175"
+                  HeightRequest="70"
+                  Clicked="DeleteAssessmentButton_OnClicked"></Button>
+
+          <Button x:Name="EditAssessmentButton"
+                  Text="Edit Assessment"
+                  BackgroundColor="#0078D4"
+                  WidthRequest="175"
+                  HeightRequest="70"
+                  Clicked="EditAssessmentButton_OnClicked"></Button>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

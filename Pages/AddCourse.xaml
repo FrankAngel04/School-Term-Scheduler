@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.Pages.AddCourse"
+             xmlns:vm="clr-namespace:C971.ViewModels"
+             x:DataType="vm:AddCourseViewModel">
+    
+    <Shell.TitleView>
+        <Label Text="Add Course"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               Margin="0,0,60,0"
+               TextColor="White"
+               FontSize="25"
+               FontAttributes="Bold"/>
+    </Shell.TitleView>
+    
+    <ScrollView>
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" RowSpacing="20" Padding="20">
+            <Frame>
+                <Grid ColumnDefinitions=".25*, .75*">
+                    <Label Text="Name:"
+                           VerticalOptions="Center"
+                           FontSize="20"/>
+                    <Entry Placeholder="Course Name"
+                           Text="{Binding NewCourse.Name}"
+                           Grid.Column="1"
+                           FontSize="20">
+                    </Entry>
+                </Grid>
+            </Frame>
+            
+            <Frame Grid.Row="1">
+                <Grid ColumnDefinitions=".25*, .75*">
+                    <Label Text="Status:"
+                           VerticalOptions="Center"
+                           FontSize="20"/>
+                    
+                    <Picker Title="Select Status"
+                            ItemsSource="{Binding StatusList}"
+                            SelectedItem="{Binding SelectedStatus}"
+                            Grid.Column="1"
+                            FontSize="20"/>
+                </Grid>
+            </Frame>
+            
+            <Frame Grid.Row="2">
+                <Grid ColumnDefinitions=".30*, .60*">
+                    <Label Text="Start Date:"
+                           VerticalOptions="Center"
+                           FontSize="20"/>
+                    
+                    <DatePicker FontSize="20"
+                                Grid.Column="1"
+                                Date="{Binding NewCourse.StartDate}"/>
+                </Grid>
+            </Frame>
+            
+            <Frame Grid.Row="3">
+                <Grid ColumnDefinitions=".30*, .60*">
+                    <Label Text="End Date:"
+                           VerticalOptions="Center"
+                           FontSize="20"/>
+                    
+                    <DatePicker 
+                                FontSize="20"
+                                Grid.Column="1"
+                                Date="{Binding NewCourse.EndDate}"/>
+                </Grid>
+            </Frame>
+            
+            <Frame Grid.Row="4">
+                <Grid ColumnDefinitions=".25*, .75*">
+                    <Label Text="Notify"
+                           VerticalOptions="Center"
+                           FontSize="20"/>
+                    
+                    <Switch Grid.Column="1"
+                            IsToggled="{Binding NewCourse.Notify}"
+                            HorizontalOptions="Start"/>
+                </Grid>
+            </Frame>
+            
+            <Frame Grid.Row="5">
+                <Grid ColumnDefinitions=".30*, .60*">
+                    <Label Text="Instructor Name:"
+                           VerticalOptions="Center"
+                           FontSize="20"/>
+                    
+                    <Entry Placeholder="Instructor Name"
+                           Text="{Binding NewCourse.Instructor}"
+                           Grid.Column="1"
+                           FontSize="20">
+                    </Entry>
+                </Grid>
+            </Frame>
+
+            <Frame Grid.Row="6">
+                <Grid ColumnDefinitions=".30*, .60*">
+                    <Label Text="Instructor Phone:"
+                           VerticalOptions="Center"
+                           FontSize="20"/>
+                    
+                    <Entry x:Name="InstructorPhone"
+                           Placeholder="Instructor Phone"
+                           Keyboard="Telephone"
+                           Text="{Binding NewCourse.InstructorPhone}"
+                           Grid.Column="1"
+                           FontSize="20"
+                           TextChanged="InstructorPhone_OnTextChanged">
+                    </Entry>
+                </Grid>
+            </Frame>
+            
+            <Frame Grid.Row="7">
+                <Grid ColumnDefinitions=".30*, .60*">
+                    <Label Text="Instructor Email:"
+                           VerticalOptions="Center"
+                           FontSize="20"/>
+                    
+                    <Entry x:Name="InstructorEmail" 
+                           Placeholder="Instructor Email"
+                           Keyboard="Email"
+                           Text="{Binding NewCourse.InstructorEmail}"
+                           Grid.Column="1"
+                           FontSize="20">
+                    </Entry>
+                </Grid>
+            </Frame>
+            
+            <Frame Grid.Row="8">
+                <Grid RowDefinitions="Auto, *">
+                    <Label Text="Notes (Optional):"
+                           VerticalOptions="Center"
+                           FontSize="20"/>
+                    
+                    <Editor Text="{Binding NewCourse.Notes}"
+                            Grid.Row="1"
+                            FontSize="20"
+                            HeightRequest="200"/>
+                </Grid>
+            </Frame>
+            
+            <Button x:Name="SaveButton"
+                    Text="Save"
+                    Grid.Row="9"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    Margin="50"
+                    BackgroundColor="#0078D4"
+                    TextColor="White"
+                    WidthRequest="200"
+                    HeightRequest="70"
+                    Command="{Binding AddCourseCommand}"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>

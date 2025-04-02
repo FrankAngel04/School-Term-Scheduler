@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SchoolTermScheduler</name>
+    </assembly>
+    <members>
+        <member name="T:C971.Classes.Assessment">
+            <inheritdoc/>
+        </member>
+        <member name="P:C971.Classes.Assessment.Type">
+            <inheritdoc cref="F:C971.Classes.Assessment.type"/>
+        </member>
+        <member name="P:C971.Classes.Assessment.Name">
+            <inheritdoc cref="F:C971.Classes.Assessment.name"/>
+        </member>
+        <member name="P:C971.Classes.Assessment.StartDate">
+            <inheritdoc cref="F:C971.Classes.Assessment.startDate"/>
+        </member>
+        <member name="P:C971.Classes.Assessment.EndDate">
+            <inheritdoc cref="F:C971.Classes.Assessment.endDate"/>
+        </member>
+        <member name="P:C971.Classes.Assessment.Notify">
+            <inheritdoc cref="F:C971.Classes.Assessment.notify"/>
+        </member>
+        <member name="T:C971.Classes.Course">
+            <inheritdoc/>
+        </member>
+        <member name="P:C971.Classes.Course.Name">
+            <inheritdoc cref="F:C971.Classes.Course.name"/>
+        </member>
+        <member name="P:C971.Classes.Course.Status">
+            <inheritdoc cref="F:C971.Classes.Course.status"/>
+        </member>
+        <member name="P:C971.Classes.Course.StartDate">
+            <inheritdoc cref="F:C971.Classes.Course.startDate"/>
+        </member>
+        <member name="P:C971.Classes.Course.EndDate">
+            <inheritdoc cref="F:C971.Classes.Course.endDate"/>
+        </member>
+        <member name="P:C971.Classes.Course.Notify">
+            <inheritdoc cref="F:C971.Classes.Course.notify"/>
+        </member>
+        <member name="P:C971.Classes.Course.Instructor">
+            <inheritdoc cref="F:C971.Classes.Course.instructor"/>
+        </member>
+        <member name="P:C971.Classes.Course.InstructorPhone">
+            <inheritdoc cref="F:C971.Classes.Course.instructorPhone"/>
+        </member>
+        <member name="P:C971.Classes.Course.InstructorEmail">
+            <inheritdoc cref="F:C971.Classes.Course.instructorEmail"/>
+        </member>
+        <member name="P:C971.Classes.Course.Notes">
+            <inheritdoc cref="F:C971.Classes.Course.notes"/>
+        </member>
+        <member name="T:C971.Classes.Term">
+            <inheritdoc/>
+        </member>
+        <member name="P:C971.Classes.Term.Name">
+            <inheritdoc cref="F:C971.Classes.Term.name"/>
+        </member>
+        <member name="P:C971.Classes.Term.StartDate">
+            <inheritdoc cref="F:C971.Classes.Term.startDate"/>
+        </member>
+        <member name="P:C971.Classes.Term.EndDate">
+            <inheritdoc cref="F:C971.Classes.Term.endDate"/>
+        </member>
+        <member name="T:C971.ViewModels.AddAssessmentViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:C971.ViewModels.AddAssessmentViewModel.SelectedCourse">
+            <inheritdoc cref="F:C971.ViewModels.AddAssessmentViewModel._selectedCourse"/>
+        </member>
+        <member name="P:C971.ViewModels.AddAssessmentViewModel.AssessmentList">
+            <inheritdoc cref="F:C971.ViewModels.AddAssessmentViewModel._assessmentList"/>
+        </member>
+        <member name="P:C971.ViewModels.AddAssessmentViewModel.NewAssessment">
+            <inheritdoc cref="F:C971.ViewModels.AddAssessmentViewModel._newAssessment"/>
+        </member>
+        <member name="P:C971.ViewModels.AddAssessmentViewModel.IsObjectiveAdded">
+            <inheritdoc cref="F:C971.ViewModels.AddAssessmentViewModel._isObjectiveAdded"/>
+        </member>
+        <member name="P:C971.ViewModels.AddAssessmentViewModel.IsPerformanceAdded">
+            <inheritdoc cref="F:C971.ViewModels.AddAssessmentViewModel._isPerformanceAdded"/>
+        </member>
+        <member name="F:C971.ViewModels.AddAssessmentViewModel.pickAssessmentCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddAssessmentViewModel.PickAssessmentCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddAssessmentViewModel.PickAssessmentCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:C971.ViewModels.AddAssessmentViewModel.PickAssessment"/>.</summary>
+        </member>
+        <member name="F:C971.ViewModels.AddAssessmentViewModel.addAssessmentCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddAssessmentViewModel.AddAssessmentCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddAssessmentViewModel.AddAssessmentCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:C971.ViewModels.AddAssessmentViewModel.AddAssessment"/>.</summary>
+        </member>
+        <member name="F:C971.ViewModels.AddAssessmentViewModel.deleteAssessmentCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddAssessmentViewModel.DeleteAssessmentCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddAssessmentViewModel.DeleteAssessmentCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:C971.ViewModels.AddAssessmentViewModel.DeleteAssessment(C971.Classes.Assessment)"/>.</summary>
+        </member>
+        <member name="F:C971.ViewModels.AddAssessmentViewModel.editAssessmentCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddAssessmentViewModel.EditAssessmentCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddAssessmentViewModel.EditAssessmentCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:C971.ViewModels.AddAssessmentViewModel.EditAssessment(C971.Classes.Assessment)"/>.</summary>
+        </member>
+        <member name="F:C971.ViewModels.AddAssessmentViewModel.tapAssessmentCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddAssessmentViewModel.TapAssessmentCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddAssessmentViewModel.TapAssessmentCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:C971.ViewModels.AddAssessmentViewModel.TapAssessment(C971.Classes.Assessment)"/>.</summary>
+        </member>
+        <member name="T:C971.ViewModels.AddCourseViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:C971.ViewModels.AddCourseViewModel.SelectedTerm">
+            <inheritdoc cref="F:C971.ViewModels.AddCourseViewModel._selectedTerm"/>
+        </member>
+        <member name="P:C971.ViewModels.AddCourseViewModel.CourseList">
+            <inheritdoc cref="F:C971.ViewModels.AddCourseViewModel._courseList"/>
+        </member>
+        <member name="P:C971.ViewModels.AddCourseViewModel.NewCourse">
+            <inheritdoc cref="F:C971.ViewModels.AddCourseViewModel._newCourse"/>
+        </member>
+        <member name="P:C971.ViewModels.AddCourseViewModel.StatusList">
+            <inheritdoc cref="F:C971.ViewModels.AddCourseViewModel._statusList"/>
+        </member>
+        <member name="P:C971.ViewModels.AddCourseViewModel.SelectedStatus">
+            <inheritdoc cref="F:C971.ViewModels.AddCourseViewModel._selectedStatus"/>
+        </member>
+        <member name="M:C971.ViewModels.AddCourseViewModel.OnSelectedStatusChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:C971.ViewModels.AddCourseViewModel.SelectedStatus"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:C971.ViewModels.AddCourseViewModel.SelectedStatus"/> is changed.</remarks>
+        </member>
+        <member name="F:C971.ViewModels.AddCourseViewModel.addCourseCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddCourseViewModel.AddCourseCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddCourseViewModel.AddCourseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:C971.ViewModels.AddCourseViewModel.AddCourse"/>.</summary>
+        </member>
+        <member name="F:C971.ViewModels.AddCourseViewModel.deleteCourseCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddCourseViewModel.DeleteCourseCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddCourseViewModel.DeleteCourseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:C971.ViewModels.AddCourseViewModel.DeleteCourse(C971.Classes.Course)"/>.</summary>
+        </member>
+        <member name="F:C971.ViewModels.AddCourseViewModel.editCourseCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddCourseViewModel.EditCourseCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddCourseViewModel.EditCourseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:C971.ViewModels.AddCourseViewModel.EditCourse(C971.Classes.Course)"/>.</summary>
+        </member>
+        <member name="F:C971.ViewModels.AddCourseViewModel.tapCourseCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddCourseViewModel.TapCourseCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddCourseViewModel.TapCourseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:C971.ViewModels.AddCourseViewModel.TapCourse(C971.Classes.Course)"/>.</summary>
+        </member>
+        <member name="T:C971.ViewModels.AddTermViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:C971.ViewModels.AddTermViewModel.TermList">
+            <inheritdoc cref="F:C971.ViewModels.AddTermViewModel._termList"/>
+        </member>
+        <member name="P:C971.ViewModels.AddTermViewModel.NewTerm">
+            <inheritdoc cref="F:C971.ViewModels.AddTermViewModel._newTerm"/>
+        </member>
+        <member name="F:C971.ViewModels.AddTermViewModel.addTermCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddTermViewModel.AddTermCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddTermViewModel.AddTermCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:C971.ViewModels.AddTermViewModel.AddTerm"/>.</summary>
+        </member>
+        <member name="F:C971.ViewModels.AddTermViewModel.deleteTermCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddTermViewModel.DeleteTermCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddTermViewModel.DeleteTermCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:C971.ViewModels.AddTermViewModel.DeleteTerm(C971.Classes.Term)"/>.</summary>
+        </member>
+        <member name="F:C971.ViewModels.AddTermViewModel.editTermCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddTermViewModel.EditTermCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddTermViewModel.EditTermCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:C971.ViewModels.AddTermViewModel.EditTerm(C971.Classes.Term)"/>.</summary>
+        </member>
+        <member name="F:C971.ViewModels.AddTermViewModel.tapTermCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.AddTermViewModel.TapTermCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.AddTermViewModel.TapTermCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:C971.ViewModels.AddTermViewModel.TapTerm(C971.Classes.Term)"/>.</summary>
+        </member>
+        <member name="T:C971.ViewModels.EditAssessmentViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:C971.ViewModels.EditAssessmentViewModel.SelectedCourse">
+            <inheritdoc cref="F:C971.ViewModels.EditAssessmentViewModel._selectedCourse"/>
+        </member>
+        <member name="P:C971.ViewModels.EditAssessmentViewModel.SelectedAssessment">
+            <inheritdoc cref="F:C971.ViewModels.EditAssessmentViewModel._selectedAssessment"/>
+        </member>
+        <member name="F:C971.ViewModels.EditAssessmentViewModel.saveAssessmentCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.EditAssessmentViewModel.SaveAssessmentCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.EditAssessmentViewModel.SaveAssessmentCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:C971.ViewModels.EditAssessmentViewModel.SaveAssessment"/>.</summary>
+        </member>
+        <member name="T:C971.ViewModels.EditCourseViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:C971.ViewModels.EditCourseViewModel.SelectedTerm">
+            <inheritdoc cref="F:C971.ViewModels.EditCourseViewModel._selectedTerm"/>
+        </member>
+        <member name="P:C971.ViewModels.EditCourseViewModel.SelectedCourse">
+            <inheritdoc cref="F:C971.ViewModels.EditCourseViewModel._selectedCourse"/>
+        </member>
+        <member name="P:C971.ViewModels.EditCourseViewModel.StatusList">
+            <inheritdoc cref="F:C971.ViewModels.EditCourseViewModel._statusList"/>
+        </member>
+        <member name="F:C971.ViewModels.EditCourseViewModel.saveCourseCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.EditCourseViewModel.SaveCourseCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.EditCourseViewModel.SaveCourseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:C971.ViewModels.EditCourseViewModel.SaveCourse"/>.</summary>
+        </member>
+        <member name="F:C971.ViewModels.EditCourseViewModel.saveNotesCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.EditCourseViewModel.SaveNotesCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.EditCourseViewModel.SaveNotesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:C971.ViewModels.EditCourseViewModel.SaveNotes"/>.</summary>
+        </member>
+        <member name="F:C971.ViewModels.EditCourseViewModel.shareNotesCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.EditCourseViewModel.ShareNotesCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.EditCourseViewModel.ShareNotesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:C971.ViewModels.EditCourseViewModel.ShareNotes"/>.</summary>
+        </member>
+        <member name="T:C971.ViewModels.EditTermViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:C971.ViewModels.EditTermViewModel.SelectedTerm">
+            <inheritdoc cref="F:C971.ViewModels.EditTermViewModel._selectedTerm"/>
+        </member>
+        <member name="F:C971.ViewModels.EditTermViewModel.saveTermCommand">
+            <summary>The backing field for <see cref="P:C971.ViewModels.EditTermViewModel.SaveTermCommand"/>.</summary>
+        </member>
+        <member name="P:C971.ViewModels.EditTermViewModel.SaveTermCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:C971.ViewModels.EditTermViewModel.SaveTerm"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Type">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Type" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StartDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StartDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EndDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EndDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Notify">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Notify" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Status">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Status" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Instructor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Instructor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InstructorPhone">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InstructorPhone" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InstructorEmail">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InstructorEmail" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Notes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Notes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedCourse">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedCourse" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AssessmentList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AssessmentList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NewAssessment">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NewAssessment" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsObjectiveAdded">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsObjectiveAdded" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPerformanceAdded">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPerformanceAdded" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedTerm">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedTerm" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CourseList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CourseList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NewCourse">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NewCourse" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StatusList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StatusList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedStatus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedStatus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TermList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TermList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NewTerm">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NewTerm" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedAssessment">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedAssessment" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Type">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Type" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StartDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StartDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EndDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EndDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Notify">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Notify" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Status">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Status" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Instructor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Instructor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InstructorPhone">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InstructorPhone" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InstructorEmail">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InstructorEmail" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Notes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Notes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedCourse">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedCourse" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AssessmentList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AssessmentList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NewAssessment">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NewAssessment" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsObjectiveAdded">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsObjectiveAdded" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPerformanceAdded">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPerformanceAdded" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedTerm">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedTerm" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CourseList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CourseList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NewCourse">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NewCourse" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StatusList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StatusList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedStatus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedStatus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TermList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TermList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NewTerm">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NewTerm" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedAssessment">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedAssessment" generated properties.</summary>
+        </member>
+    </members>
+</doc>

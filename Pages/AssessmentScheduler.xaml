@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.Pages.AssessmentScheduler"
+             xmlns:vm="clr-namespace:C971.ViewModels"
+             xmlns:class="clr-namespace:C971.Classes"
+             x:DataType="vm:AddAssessmentViewModel">
+    
+    <Shell.TitleView>
+        <Label Text="{Binding SelectedCourse.Name}"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               Margin="0,0,60,0"
+               TextColor="White"
+               FontSize="30"
+               FontAttributes="Bold"/>
+    </Shell.TitleView>
+    
+    <Grid RowDefinitions="*, Auto" RowSpacing="20">
+        <CollectionView ItemsSource="{Binding AssessmentList}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type class:Assessment}">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Delete"
+                                           BackgroundColor="Red"
+                                           Command="{Binding Source={RelativeSource AncestorType={x:Type vm:AddAssessmentViewModel}}, Path=DeleteAssessmentCommand}"
+                                           CommandParameter="{Binding .}"></SwipeItem>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <SwipeView.LeftItems>
+                            <SwipeItems>
+                                <SwipeItem x:Name="EditSwipeItem" 
+                                           Text="Edit"
+                                           BackgroundColor="Khaki"
+                                           Command="{Binding Source={RelativeSource AncestorType={x:Type vm:AddAssessmentViewModel}}, Path=EditAssessmentCommand}"
+                                           CommandParameter="{Binding .}"></SwipeItem>
+                            </SwipeItems>
+                        </SwipeView.LeftItems>
+                        <Grid Padding="10,5">
+                            <Frame BackgroundColor="LightBlue"
+                                   HeightRequest="100">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:AddAssessmentViewModel}}, Path=TapAssessmentCommand}"
+                                                          CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                                
+                                <Label Text="{Binding Type}"
+                                       FontSize="24"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"></Label>
+                            </Frame>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button x:Name="AddAssessmentButton"
+                Text="Add Assessment"
+                Grid.Row="1"
+                HorizontalOptions="Center" 
+                VerticalOptions="End" 
+                Margin="0,0,0,20" 
+                BackgroundColor="#0078D4" 
+                TextColor="White" 
+                WidthRequest="200"
+                HeightRequest="70"
+                Command="{Binding PickAssessmentCommand}"/>
+    </Grid>
+</ContentPage>

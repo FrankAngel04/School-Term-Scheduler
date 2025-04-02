@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.Pages.CourseScheduler"
+             xmlns:vm="clr-namespace:C971.ViewModels"
+             xmlns:class="clr-namespace:C971.Classes"
+             x:DataType="vm:AddCourseViewModel">
+    
+    <Shell.TitleView>
+        <Label Text="{Binding SelectedTerm.Name}"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               Margin="0,0,60,0"
+               TextColor="White"
+               FontSize="25"
+               FontAttributes="Bold"/>
+    </Shell.TitleView>
+    
+     <Grid RowDefinitions="*, Auto, Auto" RowSpacing="20">
+        <CollectionView ItemsSource="{Binding CourseList}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type class:Course}">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Delete"
+                                           BackgroundColor="Red"
+                                           Command="{Binding Source={RelativeSource AncestorType={x:Type vm:AddCourseViewModel}}, Path=DeleteCourseCommand}"
+                                           CommandParameter="{Binding .}"></SwipeItem>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <SwipeView.LeftItems>
+                            <SwipeItems>
+                                <SwipeItem x:Name="EditSwipeItem" 
+                                           Text="Edit"
+                                           BackgroundColor="Khaki"
+                                           Command="{Binding Source={RelativeSource AncestorType={x:Type vm:AddCourseViewModel}}, Path=EditCourseCommand}"
+                                           CommandParameter="{Binding .}"></SwipeItem>
+                            </SwipeItems>
+                        </SwipeView.LeftItems>
+                        <Grid Padding="10,5">
+                            <Frame BackgroundColor="LightBlue"
+                                   HeightRequest="100">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:AddCourseViewModel}}, Path=TapCourseCommand}"
+                                                          CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                                <Grid ColumnDefinitions="2*,2*"
+                                      HorizontalOptions="Fill"
+                                      VerticalOptions="Center">
+                                    <Label Text="{Binding Name}"
+                                           FontSize="24"
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"></Label>
+                                    <VerticalStackLayout Grid.Column="1" 
+                                                         HorizontalOptions="Center"
+                                                         VerticalOptions="Center"
+                                                         Spacing="5">
+                                        <Label Text="{Binding StartDate, StringFormat='Start Date: {0:M/d/yy}'}"
+                                               FontSize="16"></Label>
+                                        <Label Text="{Binding EndDate, StringFormat='End Date: {0:M/d/yy}'}"
+                                               FontSize="16"></Label>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+         <HorizontalStackLayout Grid.Row="1" HorizontalOptions="Center" Spacing="20">
+             <Button x:Name="DeleteTermButton"
+                     Text="Delete Term"
+                     HorizontalOptions="Center" 
+                     BackgroundColor="#0078D4" 
+                     TextColor="White" 
+                     WidthRequest="175"
+                     HeightRequest="70"
+                     Clicked="DeleteTermButton_OnClicked"/>
+             
+             <Button x:Name="EditTermButton"
+                     Text="Edit Term"
+                     HorizontalOptions="Center" 
+                     BackgroundColor="#0078D4" 
+                     TextColor="White" 
+                     WidthRequest="175"
+                     HeightRequest="70"
+                     Clicked="EditTermButton_OnClicked"/>
+         </HorizontalStackLayout>
+         
+        <Button x:Name="AddCourseButton"
+                Text="Add Course"
+                Grid.Row="2"
+                HorizontalOptions="Center" 
+                VerticalOptions="End" 
+                Margin="0,0,0,20" 
+                BackgroundColor="#0078D4" 
+                TextColor="White" 
+                WidthRequest="200"
+                HeightRequest="70"
+                Clicked="AddCourseButton_OnClicked"/>
+    </Grid>
+</ContentPage>

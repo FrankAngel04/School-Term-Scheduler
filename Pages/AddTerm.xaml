@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.Pages.AddTerm"
+             Title="Add Term"
+             xmlns:vm="clr-namespace:C971.ViewModels"
+             x:DataType="vm:AddTermViewModel">
+    
+    <Shell.TitleView>
+        <Label Text="Add Term"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               Margin="0,0,60,0"
+               TextColor="White"
+               FontSize="25"
+               FontAttributes="Bold"/>
+    </Shell.TitleView>
+    
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto" RowSpacing="20" Padding="20">
+        <Frame>
+            <Grid ColumnDefinitions=".25*, .75*">
+                <Label Text="Name:"
+                       VerticalOptions="Center"
+                       FontSize="20"/>
+                <Entry Placeholder="Term Name"
+                       Text="{Binding NewTerm.Name}"
+                       Grid.Column="1"
+                       FontSize="20">
+                </Entry>
+            </Grid>
+        </Frame>
+        
+        <Frame Grid.Row="1">
+            <Grid ColumnDefinitions=".30*, .60*">
+                <Label Text="Start Date:"
+                       VerticalOptions="Center"
+                       FontSize="20"/>
+                
+                <DatePicker FontSize="20"
+                            Grid.Column="1"
+                            Date="{Binding NewTerm.StartDate}"/>
+            </Grid>
+        </Frame>
+        
+        <Frame Grid.Row="2">
+            <Grid ColumnDefinitions=".30*, .60*">
+                <Label Text="End Date:"
+                       VerticalOptions="Center"
+                       FontSize="20"/>
+                
+                <DatePicker 
+                            FontSize="20"
+                            Grid.Column="1"
+                            Date="{Binding NewTerm.EndDate}"/>
+            </Grid>
+        </Frame>
+
+        <Button x:Name="SaveButton"
+                Text="Save"
+                Grid.Row="3"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Margin="50"
+                BackgroundColor="#0078D4"
+                TextColor="White"
+                WidthRequest="200"
+                HeightRequest="70"
+                Command="{Binding AddTermCommand}"/>
+    </Grid>
+</ContentPage>
